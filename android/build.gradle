@@ -5,7 +5,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.3.1'
+        classpath 'com.android.tools.build:gradle:8.4.1'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -19,7 +19,7 @@ def safeExtGet(prop, fallback) {
 apply plugin: 'com.android.library'
 
 android {
-     compileSdkVersion safeExtGet('compileSdkVersion', 28)
+     compileSdkVersion safeExtGet('compileSdkVersion', 33)
      compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -27,7 +27,7 @@ android {
 
     defaultConfig {
         minSdkVersion safeExtGet('minSdkVersion', 16)
-        targetSdkVersion safeExtGet('targetSdkVersion', 28)
+        targetSdkVersion safeExtGet('targetSdkVersion', 33)
         versionCode 1
         versionName "1.0"
         ndk {
@@ -42,6 +42,6 @@ repositories {
 
 
 dependencies {
-    implementation 'com.tom-roush:pdfbox-android:1.8.10.3'
+    implementation 'com.tom-roush.pdfbox-android:2.0.27.0'
     implementation 'com.facebook.react:react-native:+'
 }
